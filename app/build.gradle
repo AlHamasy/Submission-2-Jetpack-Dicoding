@@ -1,0 +1,88 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "id.asad.movie2"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug{
+            buildConfigField("String","BASE_URL","\"https://api.themoviedb.org/3/\"")
+            buildConfigField("String","API_KEY","\"29a3c86d1eb8c538c0e9f914bc94adbc\"")
+        }
+        release {
+            buildConfigField("String","BASE_URL","\"https://api.themoviedb.org/3/\"")
+            buildConfigField("String","API_KEY","\"29a3c86d1eb8c538c0e9f914bc94adbc\"")
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures{
+        viewBinding = true
+    }
+}
+
+dependencies {
+
+    // kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+    implementation "androidx.core:core-ktx:$coreVersion"
+
+    // ui
+    implementation "androidx.appcompat:appcompat:$appCompatVersion"
+    implementation "com.google.android.material:material:$materialVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
+    implementation "androidx.legacy:legacy-support-v4:$legacySupportVersionV4"
+
+    // lifecycle
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
+
+    //testing
+    testImplementation "junit:junit:$junitVersion"
+    androidTestImplementation "androidx.test.ext:junit:$junitExtVersion"
+    androidTestImplementation "junit:junit:$junitVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espressoVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-contrib:$espressoVersion"
+    androidTestImplementation "androidx.test:runner:$androidTestVersion"
+    androidTestImplementation "androidx.test:rules:$androidTestVersion"
+
+    // testing repository / mocking class
+    testImplementation "org.mockito:mockito-core:$mockitoVersion"
+    testImplementation "org.mockito:mockito-inline:$mockitoVersion"
+
+    // testing live data
+    testImplementation "androidx.arch.core:core-testing:$androidCoreTestVersion"
+    testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockitoKotlinVersion"
+
+    // testing idling resource
+    implementation "androidx.test.espresso:espresso-idling-resource:$idleResourceVersion"
+
+    // logging & http client
+    implementation "com.squareup.okhttp3:logging-interceptor:$okHttpLoggingInterceptor"
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+
+    // load image
+    implementation "com.github.bumptech.glide:glide:$glideVersion"
+
+}

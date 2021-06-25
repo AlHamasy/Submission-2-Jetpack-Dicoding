@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_horizontal_margin"
+    tools:context=".ui.detail.DetailContentActivity">
+
+    <ImageView
+        android:id="@+id/img_poster"
+        android:layout_width="165dp"
+        android:layout_height="250dp"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/poster"
+        android:src="@drawable/poster_movie_alita"/>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_here"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        android:layout_toEndOf="@+id/img_poster"/>
+
+    <TextView
+        android:id="@+id/tv_release_date"
+        android:text="@string/release_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/img_poster"
+        android:textSize="16sp"
+        android:textColor="@color/blue_200"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_below="@+id/tv_title"/>
+
+    <TextView
+        android:id="@+id/tv_vote_avarage_label"
+        android:text="@string/vote_average"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/img_poster"
+        android:textSize="16sp"
+        android:fontFamily="@font/sourcesanspro_regular"
+        android:textColor="@color/black"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_below="@+id/tv_release_date"/>
+
+    <TextView
+        android:id="@+id/tv_vote_average"
+        android:text="@string/percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/img_poster"
+        android:textSize="28sp"
+        android:textColor="@color/blue_200"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_below="@+id/tv_vote_avarage_label"/>
+
+    <TextView
+        android:id="@+id/tv_overview_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/overview"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:layout_below="@id/img_poster"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/tv_overview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lorem_ipsum"
+        android:textColor="@color/black"
+        android:fontFamily="@font/sourcesanspro_regular"
+        android:layout_below="@id/tv_overview_label"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="6dp"
+        android:src="@android:drawable/ic_menu_share"/>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>
+

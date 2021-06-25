@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Movie &amp; Tv Show Database</string>
+    <string name="tab_text_1">Movie</string>
+    <string name="tab_text_2">Tv Show</string>
+    <string name="poster">poster</string>
+    <string name="release_date">Release Date</string>
+    <string name="title_here">Title here</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra mattis ullamcorper. Cras consequat lacus risus, vitae malesuada neque facilisis ut. Vivamus sit amet lorem finibus, tincidunt purus sed, dictum nibh. Etiam tincidunt enim in nisl vulputate condimentum vitae eu risus. Ut sit amet mi laoreet, bibendum lacus sed, tincidunt ligula. Ut imperdiet elementum bibendum. Suspendisse nisl est, congue vitae mauris nec, egestas fringilla ex. Vivamus porta risus quis laoreet malesuada. </string>
+    <string name="overview">Overview</string>
+    <string name="percent">90%</string>
+    <string name="vote_average">Vote Average</string>
+</resources>
